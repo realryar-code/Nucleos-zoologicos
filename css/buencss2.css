@@ -1,0 +1,2137 @@
+:root {
+    --fondo-general: #F7F7F7;
+    --subtextos: #555555;
+    --texto-parrafo: #1C0F13;
+    --nav-footer: #1E3911;
+    --secciones-info: #D0D6B3;
+    --iconos-bordes: #9FA575;
+    --botones-accion: #C05746;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#provincias {
+    scroll-margin-top: 100px;
+}
+
+.barraNavegacion {
+    width: 100%;
+    height: 80px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: sticky;
+    background-color: var(--nav-footer);
+    top: 0;
+    z-index: 1000;
+}
+
+.divLogo {
+    width: 27%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    aspect-ratio: 1/1;
+    background-color: #1C0F13;
+    flex-shrink: 0;
+}
+
+.nombreWeb {
+    flex: 1;
+    height: 100%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: var(--fondo-general);
+    letter-spacing: 0.4px;
+    font-weight: 700;
+}
+
+.navegacion {
+    width: 46%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.enlaceNav {
+    color: var(--fondo-general);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    transition: all ease-in-out 0.3s;
+}
+
+.enlaceNav:hover {
+    background-color: var(--iconos-bordes);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.enlaceNav.activo {
+    color: var(--texto-parrafo);
+    font-weight: 700;
+    background-color: var(--secciones-info);
+    border-bottom: 3px solid var(--iconos-bordes);
+}
+
+.cuenta {
+    width: 27%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10vw;
+}
+
+.soloMovil {
+    display: none !important;
+}
+
+.botonPrincipal {
+    background-color: var(--botones-accion);
+    color: var(--fondo-general);
+    border: none;
+    width: auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.botonPrincipal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.botonSecundario {
+    color: var(--botones-accion);
+    border: solid 3px var(--fondo-general);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.botonSecundario:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.seccionInicial {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: var(--iconos-bordes);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.seccionNormal {
+    width: 100%;
+    height: auto;
+    background-color: var(--fondo-general);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    flex-direction: column;
+    gap: 5vh;
+    overflow: hidden;
+}
+
+.divSeccionInicial {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 48px;
+    color: var(--texto-parrafo);
+}
+
+.tituloInverso {
+    color: var(--nav-footer);
+}
+
+.divSubtitulo {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.subtitulo {
+    font-size: 38px;
+    color: var(--texto-parrafo);
+}
+
+.textoNormal {
+    font-size: 20px;
+    color: var(--texto-parrafo);
+    line-height: 1.6;
+}
+
+.subtextoNormal {
+    font-size: 16px;
+    color: var(--subtextos);
+    line-height: 1.6;
+}
+
+.negrita {
+    font-weight: 700;
+}
+
+.blanco {
+    color: var(--fondo-general);
+}
+
+.contenedorBotones {
+    display: flex;
+    width: 550px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icono {
+    width: 20px;
+    height: 20px;
+    background-color: var(--fondo-general);
+    display: inline-block;
+    margin-left: 8px;
+    border-radius: 3px;
+}
+
+.botonSecundario .icono {
+    background-color: var(--botones-accion);
+}
+
+.iconoScroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: var(--fondo-general);
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.gridConservacion {
+    width: 85%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.gridLogin {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.gridPerfil {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 50px;
+    align-items: stretch;
+}
+
+.gridTematicas {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.gridFotosPerfil {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.contenedorFooter {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 60px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.contenedorTexto {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.contenedorGrafico {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    padding: 5%;
+    align-self: flex-start;
+}
+
+.grafico {
+    width: 100%;
+    height: 100%;
+    background-color: var(--botones-accion);
+    border-radius: 10px;
+}
+
+.contenedorInformacion {
+    display: flex;
+    width: 100%;
+}
+
+.bloqueInfo {
+    display: flex;
+    width: 33%;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.circuloIcono {
+    height: 70%;
+    aspect-ratio: 1/1;
+    background-color: var(--iconos-bordes);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.circuloIcono .icono {
+    margin: 0;
+    background-color: var(--secciones-info);
+}
+
+.textoInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.botonTexto {
+    background-color: var(--botones-accion);
+    color: var(--fondo-general);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+.botonesPequenos {
+    padding: 7px 15px;
+    gap: 10px;
+    align-self: center;
+}
+
+.botonTexto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+.titulacion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.titulacion .logo {
+    height: 50px;
+    width: 50px;
+    aspect-ratio: 1/1;
+    background-color: #1C0F13;
+    flex-shrink: 0;
+}
+
+.divPresentacionCards {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+}
+
+.contenedorCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 85%;
+    gap: 50px;
+    padding: 0;
+}
+
+.grid3x3 {
+    grid-template-columns: repeat(3, 3fr);
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    background-color: var(--fondo-general);
+    border: 1px solid var(--iconos-bordes);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card.activo {
+    background-color: var(--fondo-general);
+    color: var(--texto-parrafo);
+    border-color: var(--botones-accion);
+    font-weight: 700;
+}
+
+.contenedorImagen {
+    width: 100%;
+    height: 300px;
+    background-color: var(--iconos-bordes);
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedorImagenMapa {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedorImagen::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+    pointer-events: none;
+}
+
+.contenidoCard {
+    padding: 5% 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.ubicacionCard {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.iconoPequeno {
+    width: 16px;
+    height: 16px;
+    background-color: var(--iconos-bordes);
+    display: inline-block;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.ubicacionCard .subtextoNormal {
+    margin: 0;
+}
+
+.botonCard {
+    background-color: var(--botones-accion);
+    color: var(--fondo-general);
+    border: none;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    align-self: center;
+    text-decoration: none;
+}
+
+.botonCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botonCard .icono {
+    background-color: var(--fondo-general);
+}
+
+.seccionNormal > .botonTexto {
+    align-self: center;
+}
+
+.contenedorMapaInteractivo {
+    background: var(--fondo-general);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--iconos-bordes);
+}
+
+.selectProvincias {
+    width: 100%;
+    padding: 15px 20px;
+    font-weight: 500;
+    color: var(--texto-parrafo);
+    background-color: var(--fondo-general);
+    border: 2px solid var(--iconos-bordes);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%239FA575' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 45px;
+    margin-bottom: 20px;
+}
+
+.selectProvincias:hover {
+    border-color: var(--botones-accion);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selectProvincias:focus {
+    outline: none;
+    border-color: var(--botones-accion);
+    box-shadow: 0 0 0 3px rgba(192, 87, 70, 0.1);
+}
+
+.opciones {
+    padding: 10px;
+    background-color: var(--fondo-general);
+    color: var(--texto-parrafo);
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--nav-footer);
+    padding: 60px 5% 30px 5%;
+    color: var(--fondo-general);
+}
+
+.contenedorFooter {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 60px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.columnaFooter {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 20px;
+}
+
+.logoFooter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.logoFooter .logo {
+    height: 50px;
+    width: 50px;
+}
+
+.nombreFooter {
+    flex: 1;
+    height: 100%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--fondo-general);
+    letter-spacing: 0.4px;
+    font-weight: 700;
+}
+
+.tituloColumna {
+    color: var(--fondo-general);
+    margin-bottom: 5px;
+}
+
+.listaFooter {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.enlaceFooter {
+    color: var(--fondo-general);
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+}
+
+.enlaceFooter:hover {
+    opacity: 1;
+    padding-left: 5px;
+    color: var(--iconos-bordes);
+}
+
+.lineaFooter {
+    width: 100%;
+    height: 1px;
+    background-color: var(--iconos-bordes);
+    opacity: 0.3;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.limitadorTexto {
+    width: 80%;
+}
+
+.limitadorDiv {
+    max-width: 80%;
+}
+
+.divTitulosPaginas {
+    width: 85%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: flex-start;
+}
+
+.contenedorFiltros {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: row;
+}
+
+.contenedorBusqueda {
+    width: 100%;
+    position: relative;
+}
+
+.barraBusqueda {
+    width: 100%;
+    padding: 15px 60px 15px 20px;
+    color: var(--texto-parrafo);
+    background-color: var(--fondo-general);
+    border: 2px solid var(--iconos-bordes);
+    border-radius: 10px;
+    transition: all ease-in-out 0.3s;
+}
+
+.barraBusqueda::placeholder {
+    color: var(--subtextos);
+    opacity: 0.7;
+}
+
+.barraBusqueda:hover {
+    border-color: var(--botones-accion);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barraBusqueda:focus {
+    outline: none;
+    border-color: var(--botones-accion);
+    box-shadow: 0 0 0 3px rgba(192, 87, 70, 0.1);
+}
+
+.botonBuscar {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--botones-accion);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonBuscar:hover {
+    background-color: var(--nav-footer);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.botonBuscar .icono {
+    margin: 0;
+    background-color: var(--fondo-general);
+    width: 20px;
+    height: 20px;
+}
+
+.selectZoologicos {
+    width: auto;
+    min-width: 200px;
+    padding: 15px 45px 15px 20px;
+    color: var(--texto-parrafo);
+    background-color: var(--fondo-general);
+    border: 2px solid var(--iconos-bordes);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%239FA575' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.selectZoologicos:hover {
+    border-color: var(--botones-accion);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selectZoologicos:focus {
+    outline: none;
+    border-color: var(--botones-accion);
+    box-shadow: 0 0 0 3px rgba(192, 87, 70, 0.1);
+}
+
+.paginacion {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.botonPagina {
+    background-color: var(--fondo-general);
+    color: var(--texto-parrafo);
+    border: 2px solid var(--iconos-bordes);
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonPagina:hover {
+    background-color: var(--iconos-bordes);
+    color: var(--fondo-general);
+    transform: translateY(-2px);
+}
+
+.botonPagina.activo {
+    background-color: var(--botones-accion);
+    color: var(--fondo-general);
+    border-color: var(--botones-accion);
+}
+
+.fondoBlanco {
+    background-color: var(--fondo-general);
+    padding: 0;
+}
+
+.contenedorFormulario {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding: 5% 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-self: flex-start;
+}
+
+.contenedorRestoPerfil {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-self: flex-start;
+}
+
+.perfil {
+    padding: 5%;
+}
+
+.panelPestanas {
+    display: flex;
+    background-color: var(--secciones-info); 
+    border: 2px solid var(--iconos-bordes);  
+    border-radius: 10px;       
+    padding: 5px;         
+    margin-bottom: 30px;
+    gap: 5px;
+    width: auto;
+}
+
+.pestana {
+    width: 50%;
+    background-color: var(--secciones-info); 
+    border:none;
+    padding: 12px 0px;
+    border-radius: 10px;      
+    cursor: pointer; 
+    transition: all ease-in-out 0.3s;
+}
+
+.pestana:hover {
+    background-color: var(--iconos-bordes);
+    transform: translateY(-2px);
+}
+
+.pestana.activa {
+    background-color: var(--nav-footer);
+    color: var(--fondo-general);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campoFormulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputFormulario {
+    width: 100%;
+    padding: 15px 20px;
+    color: var(--texto-parrafo);
+    background-color: var(--fondo-general);
+    border: 2px solid var(--iconos-bordes);
+    border-radius: 10px;
+    transition: all ease-in-out 0.3s;
+}
+
+.inputFormulario::placeholder {
+    color: var(--subtextos);
+    opacity: 0.7;
+}
+
+.inputFormulario:focus {
+    outline: none;
+    border-color: var(--botones-accion);
+    box-shadow: 0 0 0 3px rgba(192, 87, 70, 0.1);
+}
+
+.checkBoxFormulario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.checkBoxFormulario input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid var(--iconos-bordes);
+    border-radius: 4px;
+    background-color: var(--fondo-general);
+    transition: all ease-in-out 0.3s;
+    position: relative;
+}
+
+.checkBoxFormulario input[type="checkbox"]:hover {
+    border-color: var(--botones-accion);
+    box-shadow: 0 0 0 3px rgba(192, 87, 70, 0.1);
+}
+
+.checkBoxFormulario input[type="checkbox"]:checked {
+    background-color: var(--botones-accion);
+    border-color: var(--botones-accion);
+}
+
+.checkBoxFormulario input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--fondo-general);
+}
+
+.checkBoxFormulario label {
+    color: var(--texto-parrafo);
+    cursor: pointer;
+    user-select: none;
+}
+
+.botonFormulario {
+    background-color: var(--botones-accion);
+    color: var(--fondo-general);
+    border: none;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    margin-top: 30px;
+    letter-spacing: 0.8px;
+}
+
+.botonFormulario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.textoAyuda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.contenedorImagenLogin {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.imagenLogin {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobreImagen {
+    padding: 30px;
+    gap: 10px;
+    position: absolute;
+    max-width: calc(100% - 40px);
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.contenedorImagenLogin::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(to right, var(--fondo-general), transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.centrarContenidoCard {
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contenedorImagenPerfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--fondo-general);
+}
+
+.margenAbajo {
+    margin-bottom: 20px;
+}
+
+.margenArriba {
+    padding-top: 30px;
+}
+
+.zonaTemas {
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.zonaComentarios {
+    height: 800px;
+    width: 100%;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.mostrarDatosProvincias {
+    height: auto;
+    max-height: 300px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+.mostrarDatosEspecie {
+    max-height: 500px;
+}
+
+.cabeceraComentario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.infoUsuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatarComentario {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.datosUsuario {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.estrellas {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.accionesComentario {
+    display: flex;
+    gap: 14px;
+}
+
+.colores {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.color1 {
+    background-color: var(--botones-accion);
+}
+
+.color2 {
+    background-color: var(--iconos-bordes);
+}
+
+.color3 {
+    background-color: var(--nav-footer);
+}
+
+.color4 {
+    background-color: var(--secciones-info);
+}
+
+.contenidoCentrado {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 85%;
+}
+
+.margenIzquierdo {
+    margin-left: 20px;
+}
+
+.modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.limitarModales {
+    min-width: 600px;
+}
+
+.modalOverlay.activo {
+    display: flex;
+}
+
+.modalCambiarFoto {
+    background-color: var(--fondo-general);
+    border-radius: 15px;
+    border: 2px solid var(--iconos-bordes);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: auto;
+    max-height: auto;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.botonCerrarModal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--botones-accion);
+    color: var(--fondo-general);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonCerrarModal:hover {
+    background-color: var(--nav-footer);
+    transform: rotate(90deg);
+}
+
+.tituloModal {
+    font-size: 28px;
+    color: var(--nav-footer);
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contenedorImagenPerfil.seleccionada {
+    border-color: var(--botones-accion);
+    border-radius: 30px;
+    border: 4px solid var(--botones-accion);
+}
+
+.gap {
+    gap: 20px;
+}
+
+.contenedorEspecies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+}
+
+.contenedorChips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.chipEspecie {
+    background-color: var(--secciones-info);
+    color: var(--texto-parrafo);
+    padding: 5px 15px;
+    border-radius: 50px;
+    white-space: nowrap;
+    border: 2px solid var(--iconos-bordes);
+    transition: all 0.2s ease;
+    cursor: default;
+    display: inline-block;
+}
+
+.chipEspecie:hover {
+    background-color: var(--iconos-bordes);
+    transform: translateY(-2px);
+}
+
+.reducir {
+    width: 85%;
+}
+
+.cabeceraAdmin {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contenedorTabla {
+    width: 85%;
+    background-color: var(--fondo-general);
+    border: 2px solid var(--iconos-bordes);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tablaAdmin {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--fondo-general);
+}
+
+.tablaAdmin thead {
+    background-color: var(--nav-footer);
+    color: var(--fondo-general);
+}
+
+.tablaAdmin th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 16px;
+    border-bottom: 2px solid var(--iconos-bordes);
+}
+
+.tablaAdmin tbody tr {
+    border-bottom: 1px solid var(--iconos-bordes);
+    transition: all ease-in-out 0.2s;
+}
+
+.tablaAdmin tbody tr:hover {
+    background-color: var(--secciones-info);
+}
+
+.tablaAdmin td {
+    padding: 15px;
+    font-size: 16px;
+    color: var(--texto-parrafo);
+    vertical-align: middle;
+}
+
+.miniaturaCelda {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--iconos-bordes);
+}
+
+.accionesTabla {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.pieTabla {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.pieTabla .textoNormal {
+    color: var(--subtextos);
+}
+
+.pieTabla span {
+    font-weight: 700;
+    color: var(--nav-footer);
+}
+
+/* Botón hamburguesa (oculto por defecto) */
+.botonHamburguesa {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.lineaHamburguesa {
+    width: 100%;
+    height: 3px;
+    background-color: var(--fondo-general);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.botonHamburguesa.activo .lineaHamburguesa:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.botonHamburguesa.activo .lineaHamburguesa:nth-child(2) {
+    opacity: 0;
+}
+
+.botonHamburguesa.activo .lineaHamburguesa:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+.enlaceNavLogin {
+    display: none;
+}
+
+body.menu-abierto {
+    overflow: hidden;
+}
+/* REVISAR AQUI PARA VERSION TABLET Y MOVIL*/
+#mapaCastilla text {
+    pointer-events: none;
+}
+#mapaCastilla path {
+    cursor: pointer;          
+    transition: fill 0.3s ease, filter 0.3s ease;
+    pointer-events: all;
+}
+
+#mapaCastilla path:hover {
+    fill: var(--botones-accion) !important;
+    filter: brightness(0.9);
+}
+ 
+#mapaCastilla path[id^="path"] {
+    pointer-events: none;
+}
+ 
+/* Solo los paths que NO son letras (los del mapa) responden al ratón */
+#mapaCastilla .provincia-path {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Diseño de la tarjeta de cada centro */
+.cardEnlace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--fondo-general);
+    border: solid 1px var(--iconos-bordes);
+    width: 95%;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    margin-right: 5%;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.cardEnlace:hover {
+    background: --;
+    border-color: var(--botones-accion);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Scrollbar Real y Visible */
+.mostrarDatosProvincias::-webkit-scrollbar {
+    width: 8px;
+}
+.mostrarDatosProvincias::-webkit-scrollbar-thumb {
+    background: var(--botones-accion);
+    border-radius: 10px;
+}
+.mostrarDatosProvincias::-webkit-scrollbar-track {
+    background: var(--secciones-info);
+}
+
+/* Contenedor del dropdown */
+.contenedorDropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.perfilNavegacion {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.perfilNavegacionMini {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* El panel oculto */
+.menuDropdown {
+    display: none; /* Se activa con JS */
+    position: absolute;
+    right: 0;
+    top: 110%;
+    background-color: var(--fondo-general);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1100;
+    overflow: hidden;
+}
+
+.menuDropdown.show {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+.menuDropdown a {
+    color: var(--texto-parrafo);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all ease-in-out 0.2s;
+}
+
+.menuDropdown a:hover {
+    background-color: var(--secciones-info);
+}
+
+.menuDropdown hr {
+    border: 0;
+    border-top: 1px solid var(--fondo-general);
+    margin: 0;
+}
+
+.deslog {
+    color: var(--botones-accion) !important;
+    font-weight: 700;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1200px) {
+
+    .divLogo {
+        width: 22%;
+    }
+
+    .navegacion {
+        width: 51%;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .nombreWeb {
+        font-size: 16px;
+        padding-left: 8px;
+    }
+
+    .enlaceNav {
+        font-size: 14px;
+        padding: 12px 28px;
+    }
+
+    .botonPrincipal, .botonSecundario {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .titulo {
+        font-size: 38px;
+    }
+
+    .subtitulo {
+        font-size: 30px;
+    }
+
+    .textoNormal {
+        font-size: 16px;
+    }
+
+    .subtextoNormal {
+        font-size: 13px;
+    }
+
+    .botonTexto {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .botonesPequenos {
+        padding: 6px 12px;
+    }
+
+    .botonCard {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .nombreFooter {
+        font-size: 24px;
+    }
+
+    .tituloModal {
+        font-size: 22px;
+    }
+
+    .tablaAdmin th {
+        padding: 16px 12px;
+        font-size: 13px;
+    }
+
+    .tablaAdmin td {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    .barraNavegacion {
+        height: 120px;
+        padding: 8px 8px;
+    }
+
+    .seccionInicial {
+        min-height: calc(100vh - 120px);
+        padding: 32px 16px;
+    }
+
+    .seccionNormal {
+        padding: 32px 16px;
+        gap: 4vh;
+    }
+
+    .divSeccionInicial {
+        max-width: 1200px;
+        gap: 8vh;
+    }
+
+    .divSubtitulo {
+        max-width: 440px;
+    }
+
+    .contenedorBotones {
+        width: 440px;
+    }
+
+    .icono {
+        width: 16px;
+        height: 16px;
+        margin-left: 6px;
+    }
+    
+    .iconoScroll {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .contenedorFooter {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding-bottom: 16px;
+    }
+    
+    .gridConservacion {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .gridLogin {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .gridPerfil {
+        grid-template-columns: 2fr 3fr;
+        gap: 40px;
+    }
+    
+    .gridTematicas {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    
+    .gridFotosPerfil {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    
+    .contenedorCards {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        width: 90%;
+    }
+    
+    .contenedorTexto {
+        gap: 40px;
+        padding: 4%;
+    }
+    
+    .contenedorInformacion {
+        flex-direction: column;
+    }
+    
+    .bloqueInfo {
+        width: 100%;
+        gap: 12px;
+    }
+    
+    .titulacion .logo {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .logoFooter .logo {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .contenedorImagen {
+        height: 240px;
+    }
+    
+    .contenedorImagen::after {
+        height: 80px;
+    }
+    
+    .iconoPequeno {
+        width: 13px;
+        height: 13px;
+    }
+    
+    .barraBusqueda {
+        padding: 12px 48px 12px 16px;
+    }
+    
+    .botonBuscar {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .botonBuscar .icono {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .selectZoologicos, .selectProvincias {
+        min-width: 160px;
+        padding: 12px 36px 12px 16px;
+    }
+    
+    .paginacion {
+        gap: 8px;
+        margin-top: 32px;
+    }
+    
+    .botonPagina {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .contenedorFormulario {
+        max-width: 640px;
+        padding: 4% 2%;
+        gap: 24px;
+    }
+    
+    .contenedorRestoPerfil {
+        gap: 24px;
+    }
+    
+    .panelPestanas {
+        padding: 4px;
+        margin-bottom: 24px;
+        gap: 4px;
+    }
+    
+    .pestana {
+        padding: 10px 0px;
+    }
+    
+    .formulario {
+        gap: 16px;
+    }
+    
+    .inputFormulario {
+        padding: 12px 16px;
+    }
+    
+    .checkBoxFormulario input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .botonFormulario {
+        padding: 12px 16px;
+        margin-top: 24px;
+    }
+    
+    .contenedorImagenPerfil {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .zonaComentarios {
+        height: 640px;
+        width: 100%;
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .avatarComentario {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .colores {
+        height: 48px;
+    }
+    
+    .modalCambiarFoto {
+        padding: 24px;
+        gap: 24px;
+    }
+    
+    .botonCerrarModal {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+    
+    .chipEspecie {
+        padding: 4px 12px;
+        font-size: 13px;
+    }
+    
+    .miniaturaCelda {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .accionesTabla {
+        gap: 8px;
+    }
+    
+    .botonAccion {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .footer {
+        padding: 48px 4% 24px 4%;
+    }
+    
+    .columnaFooter {
+        gap: 16px;
+    }
+    
+    .logoFooter {
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .listaFooter {
+        margin-top: 8px;
+        gap: 10px;
+    }
+    
+    .lineaFooter {
+        margin: 16px 0;
+    }
+    
+    .copyright {
+        padding-top: 16px;
+    }
+    
+    .contenidoCentrado,
+    .divTitulosPaginas,
+    .cabeceraAdmin,
+    .contenedorTabla,
+    .pieTabla {
+        width: 90%;
+    }
+    
+    .contenedorTabla {
+        overflow-x: auto;
+    }
+
+    .accionesTabla {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedorFooter {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-bottom: 16px;
+    }
+    
+    .gridConservacion {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .gridLogin {
+        grid-template-columns: 3fr 2fr;
+        gap: 40px;
+    }
+    
+    .gridPerfil {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .gridTematicas {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    
+    .gridFotosPerfil {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    
+    .contenedorCards {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        width: 90%;
+    }
+
+    .barraNavegacion {
+        height: 60px;
+        padding: 10px 15px;
+        position: relative;
+    }
+    
+    .divLogo {
+        width: auto;
+        flex: 1;
+    }
+    
+    .nombreWeb {
+        font-size: 16px;
+        padding-left: 8px;
+    }
+    
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .botonHamburguesa {
+        display: flex;
+    }
+    
+    .cuenta {
+        display: none;
+    }
+    
+    .navegacion {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: calc(100vh - 60px);
+        background-color: var(--nav-footer);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 30px 20px;
+        gap: 0;
+        transition: right 0.3s ease;
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        z-index: 999;
+    }
+    
+    .navegacion.activo {
+        right: 0;
+    }
+
+    .soloMovil {
+        display: flex !important;
+        align-items: center;
+        width: 100%;
+        justify-content: start;
+    }
+
+    .enlaceNav {
+        width: 100%;
+        padding: 15px 20px;
+        text-align: left;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    
+    .enlaceNav.activo {
+        background-color: var(--secciones-info);
+        border-bottom: none;
+        border-left: 4px solid var(--iconos-bordes);
+    }
+    
+    .enlaceNavLogin {
+        display: block;
+        background-color: var(--botones-accion);
+        color: var(--fondo-general);
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 700;
+    }
+    
+    .enlaceNavLogin:hover {
+        background-color: var(--botones-accion);
+        opacity: 0.9;
+    }
+    
+    .navegacion.activo::before {
+        content: '';
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 60px);
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+    
+    .seccionInicial {
+        min-height: calc(100vh - 60px);
+        padding: 20px 15px;
+    }
+    
+    .seccionNormal {
+        padding: 20px 15px;
+        gap: 3vh;
+    }
+    
+    .titulo {
+        font-size: 28px;
+    }
+    
+    .subtitulo {
+        font-size: 22px;
+    }
+    
+    .textoNormal {
+        font-size: 14px;
+    }
+    
+    .subtextoNormal {
+        font-size: 12px;
+    }
+    
+    .botonPrincipal,
+    .botonSecundario,
+    .botonTexto {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .contenedorBotones {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .divSeccionInicial,
+    .divTitulosPaginas,
+    .contenedorCards,
+    .contenidoCentrado,
+    .contenedorTabla,
+    .pieTabla {
+        width: 95%;
+    }
+
+    .cabeceraAdmin {
+        width: 95%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .zonaComentarios {
+        width: 100%;
+        padding: 8px;
+    }
+    
+    .footer {
+        padding: 40px 5% 20px 5%;
+    }
+    
+    .nombreFooter {
+        font-size: 20px;
+    }
+
+    .cabeceraComentario {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .accionesComentario {
+        display: flex;
+        padding-left: 40%;
+    }
+    
+    .contenedorFormulario {
+        padding: 5% 5%;
+    }
+    
+    .modalCambiarFoto {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .gridFotosPerfil {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .tablaAdmin {
+        font-size: 12px;
+    }
+    
+    .tablaAdmin th,
+    .tablaAdmin td {
+        padding: 10px 8px;
+        font-size: 11px;
+    }
+    
+    .miniaturaCelda {
+        width: 40px;
+        height: 40px;
+    }
+
+    .selectZoologicos, .selectProvincias {
+        min-width: 120px;
+    }
+
+    .margenIzquierdo {
+        margin-left: 10px;
+    }
+
+    .contenedorFiltros {
+        flex-direction: column;
+        align-items: start;
+    }
+}
